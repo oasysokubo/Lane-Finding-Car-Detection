@@ -1,3 +1,9 @@
+# Capture video from camera or load a video, OpenCV provides a very simple interface for this.
+# To capture a video, a VideoCapture object must be created. Its argument can be either the device index
+# or the name of a video file. A device index is a number to specify which camera to use. The main camera
+# would be a webcam and can be passed as a 0 (or -1). You can select a second camera by passing 1 and so on.
+# From there, the camera captures frame-by-frame and displays it on the screen.
+
 import cv2
 import numpy as np
 
@@ -17,9 +23,6 @@ while(cap.isOpened()):
     # cv2.imshow("Original Scene Size", frame)
 
     if ret == True:
-
-        # Write the frame into the file 'output.avi'
-        # out.write(frame)
 
         # Display frame
         cv2.imshow('Scene', cv2.resize(frame, (700, 400)))
